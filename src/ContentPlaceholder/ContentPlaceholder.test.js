@@ -1,6 +1,6 @@
 /* global describe, expect, test */
 import React from 'react'
-import ContentPlaceholder from './ContentPlaceholder'
+import ContentPlaceholder from './index'
 import renderer from 'react-test-renderer'
 
 describe('(Component) ContentPlaceholder', () => {
