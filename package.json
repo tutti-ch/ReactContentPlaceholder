@@ -1,0 +1,39 @@
+{
+  "name": "react-content-placeholder",
+  "version": "1.0.0",
+  "description": "A handy placeholder component to show the user when content is loading Edit",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutti-ch/ReactContentPlaceholder.git"
+  },
+  "keywords": [
+    "React",
+    "Placeholder",
+    "Facebook",
+    "Content",
+    "Spinner"
+  ],
+  "author": "Savas Vedova <savas@vsk.me>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tutti-ch/ReactContentPlaceholder/issues"
+  },
+  "homepage": "https://github.com/tutti-ch/ReactContentPlaceholder#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^16.0.0"
+  }
+}

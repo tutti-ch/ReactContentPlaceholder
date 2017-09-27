@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) ContentPlaceholder should render 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className=""
+  >
+    <div
+      className="undefined undefined"
+    />
+    <div
+      className={undefined}
+    >
+      <div
+        className="undefined"
+      />
+      <div
+        className="undefined"
+      />
+      <div
+        className="undefined"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`(Component) ContentPlaceholder should render 2`] = `
+<div
+  className={undefined}
+>
+  <div
+    className="undefined undefined"
+  >
+    <div
+      className={undefined}
+    >
+      <div
+        className="undefined undefined"
+      />
+    </div>
+    <div
+      className={undefined}
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className="undefined"
+        />
+        <div
+          className="undefined"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`(Component) ContentPlaceholder should render 3`] = `
+<div
+  className={undefined}
+>
+  <div
+    className="undefined undefined"
+  >
+    <div
+      className={undefined}
+    >
+      <div
+        className="undefined undefined"
+      />
+    </div>
+    <div
+      className={undefined}
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className="undefined"
+        />
+        <div
+          className="undefined"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="undefined undefined"
+    />
+    <div
+      className={undefined}
+    >
+      <div
+        className="undefined"
+      />
+      <div
+        className="undefined"
+      />
+    </div>
+  </div>
+  <div
+    className={undefined}
+  >
+    <div
+      className="undefined"
+    />
+    <div
+      className="undefined"
+    />
+    <div
+      className="undefined"
+    />
+    <div
+      className="undefined"
+    />
+  </div>
+  <div
+    className={undefined}
+  >
+    <div
+      className="undefined"
+    />
+    <div
+      className="undefined"
+    />
+  </div>
+</div>
+`;

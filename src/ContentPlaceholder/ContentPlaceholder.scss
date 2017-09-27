@@ -1,0 +1,121 @@
+@import 'style_guide';
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0
+  }
+  100% {
+    background-position: 468px 0
+  }
+}
+
+.animatedBg {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: $greyscale-90 linear-gradient(to right, $greyscale-90 8%, $greyscale-95 18%, $greyscale-90 33%);
+  background-size: 800px 104px;
+  position: relative;
+  height: 0.4rem;
+  margin-bottom: $size-xxs;
+  width: 60%;
+
+  // Every fourth, starting at the first
+  &:nth-child(4n + 1) {
+    width: 80%;
+  }
+
+  // Every even
+  &:nth-child(even) {
+    width: 90%;
+  }
+}
+
+.paragraph {
+  margin-bottom: $size-m;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.imageText {
+  margin-bottom: $size-m;
+  $image-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.vertical {
+    flex-direction: column;
+
+    .contentLeft {
+      margin-right: 0;
+      flex: 1 1 auto;
+    }
+
+    .contentRight {
+      width: 100%;
+      margin-top: $size-xs;
+
+      .animatedBg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .contentLeft {
+    flex: 0 0 auto;
+    width: $image-size;
+    margin-right: $size-l;
+  }
+
+  .contentRight {
+    flex: 1 1 auto;
+
+    .animatedBg:first-child {
+      height: 0.7rem;
+    }
+  }
+
+  .animatedBg.image {
+    height: $image-size;
+    width: $image-size;
+    border-radius: 50%;
+  }
+}
+
+.card {
+  border: 1px solid $border-default;
+  padding: $size-m;
+  display: flex;
+
+  .cardImage {
+    height: 5rem;
+    flex: 0 0 auto;
+    width: 30%;
+    margin-right: $size-m;
+  }
+
+  .paragraph {
+    flex: 1 1 auto;
+  }
+
+  &.vertical {
+    flex-direction: column;
+    width: 100%;
+
+    .cardImage {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+
+    .paragraph {
+      width: 100%;
+      margin-top: $size-xs;
+    }
+  }
+}
