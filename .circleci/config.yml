@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -14,10 +15,17 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
+    environment:
+      CC_TEST_REPORTER_ID: 935646147f0890a9950d9af9b47a884194a1c569e4a6e8e6d93470679810475e
+
     working_directory: ~/repo
 
     steps:
       - checkout
+
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
 
       # Download and cache dependencies
       - restore_cache:
@@ -33,7 +41,16 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      # Install the test reporter and notify a before build
+      - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: chmod +x ./cc-test-reporter
+      - run: ./cc-test-reporter before-build
+
       # run tests!
-      - run: yarn test
+      - run: yarn test -- --coverage
+      - run: npm install -g codeclimate-test-reporter
+      - run: codeclimate-test-reporter < ./coverage/lcov.info
+
+
 
 
