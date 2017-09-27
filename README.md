@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/tutti-ch/ReactContentPlaceholder.svg?style=svg)](https://circleci.com/gh/tutti-ch/ReactContentPlaceholder)
+
 # ReactContentPlaceholder
 A handy placeholder component to show the user when content is loading
 
